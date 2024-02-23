@@ -1,11 +1,11 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
-import App from './components/App';
+import Calculator from './components/Calculator';
 import './css/styles.css';
 
 const root = createRoot(document.getElementById('root'));
 root.render(
   <StrictMode>
-    <App />
+    <Calculator />
   </StrictMode>
 );
