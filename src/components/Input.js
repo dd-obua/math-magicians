@@ -1,8 +1,4 @@
-import { useState } from 'react';
-
-const Input = () => {
-  const [input, setInput] = useState(0);
-
+const Input = ({ input }) => {
   return <input type="text" value={input} />;
 };
 
