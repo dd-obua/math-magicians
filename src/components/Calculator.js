@@ -15,7 +15,7 @@ const Calculator = () => {
       <Input value={input} />
 
       {btnText.map((btn) => (
-        <Button>{btn}</Button>
+        <Button onClick={handleClick}>{btn}</Button>
       ))}
     </article>
   );
