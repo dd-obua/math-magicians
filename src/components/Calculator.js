@@ -13,9 +13,10 @@ const Calculator = () => {
   return (
     <article>
       <Input value={input} />
-
       {btnText.map((btn) => (
-        <Button onClick={handleClick}>{btn}</Button>
+        <Button onClick={handleClick} key={btn}>
+          {btn}
+        </Button>
       ))}
     </article>
   );
