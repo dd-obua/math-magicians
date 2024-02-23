@@ -29,15 +29,6 @@ article {
   box-shadow: 1px 3px 5px #c3c5df;
 }
 
-article > button:nth-child(18) {
-  grid-column: span 2;
-}
-
-article > button:nth-child(4n + 1),
-article > button:last-child {
-  background: #fac295 !important;
-}
-
 article input {
   grid-column: 1/-1;
   border: 0px solid #e1e1e1;
@@ -55,6 +46,19 @@ article button {
   padding: 3.6rem 0;
   cursor: pointer;
   font-size: 2.4rem;
+}
+
+article button:hover {
+  border: 1px dotted #242424;
+}
+
+article > button:nth-child(18) {
+  grid-column: span 2;
+}
+
+article > button:nth-child(4n + 1),
+article > button:last-child {
+  background: #fac295 !important;
 }
 
 article button[id='zero'] {
