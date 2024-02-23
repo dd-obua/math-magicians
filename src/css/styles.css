@@ -52,6 +52,6 @@ article button[id='zero'] {
   grid-column: 1/3;
 }
 
-article button.operator {
+article button.basic-operator {
   background: #fac295;
 }
