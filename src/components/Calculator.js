@@ -1,10 +1,13 @@
 import Input from './Input';
 import Button from './Button';
+import { useState } from 'react';
 
 const Calculator = () => {
+  const [input, setInput] = useState(0);
+
   return (
     <article>
-      <Input />
+      <Input value={input} />
       <Button>AC</Button>
       <Button>+/-</Button>
       <Button>%</Button>

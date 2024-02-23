@@ -1,5 +1,5 @@
-const Input = () => {
-  return <input type="text" value="0" />;
+const Input = ({ value }) => {
+  return <input type="text" value={value} />;
 };
 
 export default Input;
