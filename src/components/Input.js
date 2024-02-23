@@ -1,5 +1,9 @@
+import { useState } from 'react';
+
 const Input = () => {
-  return <input type="text" value="0" />;
+  const [entry, setEntry] = useState(0);
+
+  return <input type="text" value={entry} />;
 };
 
 export default Input;
