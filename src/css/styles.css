@@ -29,6 +29,15 @@ article {
   box-shadow: 1px 3px 5px #c3c5df;
 }
 
+article > button:nth-child(18) {
+  grid-column: span 2;
+}
+
+article > button:nth-child(4n + 1),
+article > button:last-child {
+  background: #fac295 !important;
+}
+
 article input {
   grid-column: 1/-1;
   border: 0px solid #e1e1e1;
@@ -36,7 +45,7 @@ article input {
   padding: 2.4rem;
   text-align: right;
   color: #fff;
-  background: #c3c5df;
+  background: #c3c5df !important;
   font-size: 5.2rem;
 }
 
@@ -50,8 +59,4 @@ article button {
 
 article button[id='zero'] {
   grid-column: 1/3;
-}
-
-article button.basic-operator {
-  background: #fac295;
 }
