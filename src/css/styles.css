@@ -20,8 +20,8 @@ input {
 }
 
 article {
-  width: 600px;
-  margin: 2.4rem auto 0 auto;
+  width: 48rem;
+  margin: 7.2rem auto;
   background: #c3c5df;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -43,7 +43,7 @@ article input {
 article button {
   background: #fff;
   border: none;
-  padding: 3.6rem 0;
+  padding: 2.4rem 0;
   cursor: pointer;
   font-size: 2.4rem;
 }
