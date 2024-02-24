@@ -9,13 +9,15 @@ const Jokes = () => {
     const intervalId = setInterval(async () => {
       try {
         setLoading(true);
+
         const res = await fetch('https://geek-jokes.sameerkumar.website/api?format=json');
         const data = await res.json();
-        setJoke(data.joke);
+
         setLoading(false);
+        setJoke(data.joke);
       } catch (error) {
-        console.log(error.message);
         setError('Error fetching joke.');
+
         setLoading(false);
       }
     }, 10000);
