@@ -1,11 +1,20 @@
 import Input from './Input';
 import Button from './Button';
+import calculate from '../logic/calculate';
 import { useState } from 'react';
 
 const Calculator = () => {
-  const [input, setInput] = useState(0);
+  const [calculatorData, setCalculatorData] = useState({
+    total: null,
+    next: null,
+    operation: null,
+  });
 
-  const handleClick = (e) => {};
+  const handleClick = (e) => {
+    const buttonName = e.target.textContent;
+    const newData = calculate(calculatorData, buttonName);
+    setCalculatorData(newData);
+  };
 
   // prettier-ignore
   const btnText = [
@@ -18,9 +27,10 @@ const Calculator = () => {
 
   return (
     <article>
-      <Input value={input} />
+      <Input value={calculatorData.next || calculatorData.total || '0'} />
+
       {btnText.map((btn) => (
-        <Button onClick={handleClick} key={btn}>
+        <Button key={btn} onClick={handleClick}>
           {btn}
         </Button>
       ))}
