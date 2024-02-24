@@ -2,23 +2,30 @@ import { useEffect, useState } from 'react';
 
 const Jokes = () => {
   const [joke, setJoke] = useState('');
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
 
   useEffect(() => {
     const intervalId = setInterval(async () => {
       try {
+        setLoading(true);
         const res = await fetch('https://geek-jokes.sameerkumar.website/api?format=json');
         const data = await res.json();
         setJoke(data.joke);
+        setLoading(false);
       } catch (error) {
         console.log(error.message);
-        setJoke('Error fetching joke.');
+        setError('Error fetching joke.');
+        setLoading(false);
       }
     }, 10000);
 
     return () => clearInterval(intervalId);
   }, []);
 
-  return <p>{joke}</p>;
+  if (loading) return <p className="joke">Loading ...</p>;
+  if (error) return <p className="joke">{error}</p>;
+  return <p className="joke">{joke}</p>;
 };
 
 export default Jokes;
