@@ -20,7 +20,7 @@ const Jokes = () => {
 
         setLoading(false);
       }
-    }, 10000);
+    }, 15000);
 
     return () => clearInterval(intervalId);
   }, []);
